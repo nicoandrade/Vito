@@ -45,78 +45,21 @@ function ql_quemalabs_options_register($wp_customize) {
 		'type' => 'option'
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'content_typography_color', array(
-		'label'      => 'Content Color',
+		'label'      => __( 'Content Color', 'eneaa' ),
 		'section'    => 'colors',
 		'settings'   => 'content_typography_color'
 	) ) );
 
-
-
-
-
-
-
-
-	/* Typography */
-/*
-	$wp_customize->add_section( 'typography', array(
-		'title' => __( 'Typography', 'quemalabs_admin' ),
-		'priority' => 110
-	) );
-
-	$wp_customize->add_setting( 'content_typography_color', array(
-		'default' => $options['content_typography_color']['std'],
-		'transport'  => 'postMessage',
-		'type' => 'option'
-	) );
-	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'content_typography_color', array(
-		'label'      => $options['content_typography_color']['name'],
-		'section'    => 'typography',
-		'settings'   => 'content_typography_color'
-	) ) );
-
-
-
-	$wp_customize->add_setting( 'content_typography_font', array(
-		'default' => $options['content_typography_font']['std'],
-		'type' => 'option'
-	) );
-	$wp_customize->add_control( 'content_typography_font', array(
-		'label' => $options['content_typography_font']['name'],
-		'section' => 'typography',
-		'settings' => 'content_typography_font',
-		'type' => $options['content_typography_font']['type'],
-		'choices' => $options['content_typography_font']['options']
-	) );
-
-
-
 	$wp_customize->add_setting( 'links_typography_color', array(
-		'default' => $options['links_typography_color']['std'],
+		'default' => '#68B1D5',
 		'transport'  => 'postMessage',
 		'type' => 'option'
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'links_typography_color', array(
-		'label'      => $options['links_typography_color']['name'],
-		'section'    => 'typography',
+		'label'      => __( 'Links Color', 'eneaa' ),
+		'section'    => 'colors',
 		'settings'   => 'links_typography_color'
 	) ) );
-
-
-
-	$wp_customize->add_setting( 'links_typography_font', array(
-		'default' => $options['links_typography_font']['std'],
-		'type' => 'option'
-	) );
-	$wp_customize->add_control( 'links_typography_font', array(
-		'label' => $options['links_typography_font']['name'],
-		'section' => 'typography',
-		'settings' => 'links_typography_font',
-		'type' => $options['links_typography_font']['type'],
-		'choices' => $options['links_typography_font']['options']
-	) );
-
-*/
 
 
 

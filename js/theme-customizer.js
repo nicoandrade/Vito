@@ -89,63 +89,6 @@
 
 
 
-
-  /*
-  //Header
-  */
-
-    //Update Header width in real time...
-  wp.customize( 'quemalabs_options[header_width]', function( value ) {
-    value.bind( function( newval ) {
-      $("#header").toggleClass("container");
-      $("#header").toggleClass("container-fluid");
-      
-    } );
-  } );
-
-      //Update Header layout in real time...
-  wp.customize( 'quemalabs_options[header_style]', function( value ) {
-    value.bind( function( newval ) {
-      var header_classes = 'header2 header3 header4 header5';
-
-
-        $("#header").addClass('header'+newval);
-        console.log(header_classes);
-        header_classes = header_classes.replace("header"+newval, "");
-        console.log(header_classes);
-        $("#header").removeClass(header_classes);
-        
-    } );
-  } );
-
-
-
-
-  /*
-  //Layout
-  */
-
-  //Update Sidebar in real time...
-  wp.customize( 'quemalabs_options[sidebar_side]', function( value ) {
-    value.bind( function( newval ) {
-      $("#content").toggleClass("col-md-push-3");
-      $("#sidebar").toggleClass("col-md-pull-9");
-    } );
-  } );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 } )( jQuery );
 
 
