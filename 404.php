@@ -1,15 +1,17 @@
 	<?php get_header(); ?>
-		<?php get_template_part( "/templates/beforeloop", "fullwidth" ) ?> 
+		<div id="content">
                         
-                                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-                                            
-                                                <h2>Error 404 - Not Found</h2>
-                                            
-                                            <p>Sorry, but the requested resource was not found on this site. Please try again or contact the administrator for assistance.</p>
-                                            
-                                        <div class="clear"></div>
-                                                
-                                 </article>
-                            <?php get_template_part( "/templates/afterloop", "fullwidth" ) ?> 
+             <article class="error-404 not-found">
+                <div class="post-inside">
+                        
+                        <h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'eneaa' ); ?></h1>
+                        
+                        <p><?php _e( 'It looks like nothing was found at this location.', 'eneaa' ); ?></p>
+                        
+                    <div class="clearfix"></div>
+                </div>
+                            
+             </article>
+        <?php get_template_part( "/templates/afterloop", "404" ) ?> 
 	
 	<?php get_footer(); ?>

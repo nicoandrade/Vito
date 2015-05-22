@@ -2,14 +2,14 @@
 
     <div id="content">
                 
-    	<?php if (have_posts()) : ?>
-		<?php while (have_posts()) : the_post(); ?>
-        	
+        <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+            
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
 
-                <?php get_template_part( "post_image", "single" ); ?>
+                <?php get_template_part( "post_image", "image" ); ?>
 
                 <div class="post-inside container-fluid">
                     <div class="row">
@@ -17,10 +17,16 @@
                             <?php the_title( '<h1 class="post_title">', '</h1>' ); ?>
 
                             <div class="entry">
+                                <?php
+                                    echo wp_get_attachment_image( get_the_ID(), 'large' );
+                                ?>
                         
-                                <?php the_content(); //Read more button is in framework/functions/single_functions.php?>
+                                <?php if ( has_excerpt() ) : ?>
+                                    <div class="entry-caption">
+                                        <?php the_excerpt(); ?>
+                                    </div><!-- .entry-caption -->
+                                <?php endif; ?>
 
-                                <p class="tags"><i class="fa fa-tag"></i> <?php the_tags('', '', ''); ?></p>
 
                                 <div class="clearfix"></div>
                             </div><!-- /entry -->
@@ -40,7 +46,7 @@
 
 
                         <div class="metadata col-md-3 col-lg-2">
-                            <?php get_template_part( "meta", "single" ); ?>
+                            <?php get_template_part( "meta", "image" ); ?>
                             <div class="clearfix"></div>
                         </div><!-- /metadata -->
 
@@ -52,18 +58,18 @@
                     
             <div class="clearfix"></div>
                     
-        			
+                    
             <?php comments_template(); ?>
 
     
 <?php endwhile; else: ?>
         
     
-        <?php get_template_part( "/templates/content-none", "single" ); ?>
+        <?php get_template_part( "/templates/content-none", "image" ); ?>
     
         
 <?php endif; ?>
             
-    <?php get_template_part( "/templates/afterloop", "single" ) ?> 
+    <?php get_template_part( "/templates/afterloop", "image" ) ?> 
 
 <?php get_footer(); ?>

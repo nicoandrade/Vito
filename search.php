@@ -1,49 +1,58 @@
 <?php get_header(); ?>
-		<?php get_template_part( "/templates/beforeloop", "search" ) ?> 
 
-					<?php if (have_posts()) : ?>
+	<div id="content">
 
-                        <?php while (have_posts()) : the_post(); ?>
-        
-                            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-     
+        <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'eneaa' ), get_search_query() ); ?></h1>
 
-                                <h3 class=""><a href="<?php echo esc_url(get_permalink()) ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+			<?php if (have_posts()) : ?>
 
+                <?php while (have_posts()) : the_post(); ?>
 
-                                <div class="post_content">
-                                        <div class="entry">
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
-                                            <?php the_excerpt(); ?>
+                        <?php 
+                        if(!get_post_format()) {
+                            //Display the Post Image by default
+                            get_template_part( "post_image", "search" );
+                        } else {
+                            get_template_part('format', get_post_format());
+                        }
+                        ?>
 
-                                            <div class="clearfix"></div>
-                                        </div><!-- /entry -->
+                        <div class="post-inside container-fluid">
+                            <div class="row">
+                                <div class="post-content col-md-9 col-lg-10">
+                                    <?php the_title( sprintf( '<h2 class="post_title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
+                                    <div class="entry">
+                                       <?php the_excerpt(); ?>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
                                 </div><!-- /post_content -->
 
-                                <?php get_template_part( "meta", "search" ); ?>
+                                <div class="metadata col-md-3 col-lg-2">
+                                    <?php get_template_part( "meta", "search" ); ?>
+                                     <div class="clearfix"></div>
+                                </div><!-- /metadata -->
 
-                                <div class="clearfix"></div>
+                            </div><!-- /row -->
+                        </div><!-- /post-inside -->
 
-                            </article>
-        
-                        <?php endwhile; ?>
-        
-                        
-                   
-                    <div class="pagination_wrap">
-                        <?php get_template_part( "pagination", "index" ); ?>
-                    </div><!-- /pagination_wrap -->
-        
-                    <?php else : ?>
-        
-                    <article>
-                        <h2 class="post_title">Not Found</h2>
-                        <p>Sorry, but the requested resource was not found on this site.</p>
-                        <div class="clear"></div>
+                        <div class="clearfix"></div>
                     </article>
         
-                    <?php endif; ?>
+                <?php endwhile; ?>
+        
+
+                    <?php get_template_part( "pagination", "search" ); ?>
+
+        
+                <?php else : ?>
+
+                    <?php get_template_part( "/templates/content-none", "search" ); ?>
+        
+                <?php endif; ?>
                     
               <?php get_template_part( "/templates/afterloop", "search" ) ?> 
 

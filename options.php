@@ -834,13 +834,6 @@ function optionsframework_options() {
 }
 
 
-/**
- * Front End Customizer
- *
- * WordPress 3.4 Required
- */
-
-ql_require_file('/theme_customizer.php', THEME_FUNCTIONS, CHILD_THEME_FUNCTIONS);
 
 
 

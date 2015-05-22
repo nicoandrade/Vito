@@ -27,48 +27,9 @@
     } );
   } );
 
-	//Update Hero color in real time...
-	wp.customize( 'quemalabs_options[featured_color]', function( value ) {
-		value.bind( function( newval ) {
-			$('.hero_color, .ql_logo').each(function(index, el) {
-				$(el).style('color', newval, 'important');
-			});
-		} );
-	} );
-
-  //Update Hero color in real time...
-  wp.customize( 'quemalabs_options[featured_color2]', function( value ) {
-    value.bind( function( newval ) {
-      $('').each(function(index, el) {
-        $(el).style('color', newval, 'important');
-      });
-      $('.hero_bck2').each(function(index, el) {
-        $(el).style('background-color', newval, 'important');
-      });
-      $('.sticky').each(function(index, el) {
-        $(el).style('border-color', newval, 'important');
-      });
-    } );
-  } );
-
-	//Update Contrast color in real time...
-	wp.customize( 'quemalabs_options[contrast_color]', function( value ) {
-		value.bind( function( newval ) {
-			$('').style('color', newval, 'important');
-		} );
-	} );
-
-	//Update Background color in real time...
-	wp.customize( 'quemalabs_options[background_color]', function( value ) {
-		value.bind( function( newval ) {
-			$('body').each(function(index, el) {
-				$(el).style('background-color', newval, 'important');
-			});
-		} );
-	} );
-
+	
 	//Update Headings color in real time...
-	wp.customize( 'quemalabs_options[headings_color]', function( value ) {
+	wp.customize( 'headings_color', function( value ) {
 		value.bind( function( newval ) {
 			$('h1, h2, h3, h4, h5, h6').each(function(index, el) {
 				$(el).style('color', newval, 'important');
@@ -106,48 +67,20 @@
 
 
 
-  /*
-  //Footer
-  */
-
-  //Update Footer color in real time...
-  wp.customize( 'quemalabs_options[footer_color]', function( value ) {
-    value.bind( function( newval ) {
-      $('.footer_wrap').each(function(index, el) {
-        $(el).style('background-color', newval, 'important');
-      });
-    } );
-  } );
-
-  //Update Footer color in real time...
-  wp.customize( 'quemalabs_options[footer_color_text]', function( value ) {
-    value.bind( function( newval ) {
-      $('.footer_wrap, #footer, #footer ul li > a, footer ol li > a, #footer h4, #footer ul li, #footer ol li, .sub_footer, .sub_footer a').each(function(index, el) {
-        $(el).style('color', newval, 'important');
-      });
-      $('#footer .widget, .sub_footer').each(function(index, el) {
-        $(el).style('border-color', newval, 'important');
-      });
-    } );
-  } );
-
-
-
-
 
   /*
   //Typography
   */
 
   //Update Font Content color in real time...
-  wp.customize( 'quemalabs_options[content_typography_color]', function( value ) {
+  wp.customize( 'content_typography_color', function( value ) {
     value.bind( function( newval ) {
       $('body').style('color', newval, 'important');
     } );
   } );
 
   //Update Font Links color in real time...
-  wp.customize( 'quemalabs_options[links_typography_color]', function( value ) {
+  wp.customize( 'links_typography_color', function( value ) {
     value.bind( function( newval ) {
       $('a').style('color', newval, 'important');
     } );

@@ -1,4 +1,4 @@
-<div id="comments">
+
 	<?php
     
         if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
@@ -12,39 +12,40 @@
     ?>
     
     <?php if ( have_comments() ) : ?>
+    	<div id="comments">
         
-        <h3 class=""><?php comments_number(__('No Responses', 'eneaa'), __('One Response', 'eneaa'), __('% Responses', 'eneaa') );?></h3>
-    
-        <div class="navigation">
-            <div class="next-posts"><?php previous_comments_link() ?></div>
-            <div class="prev-posts"><?php next_comments_link() ?></div>
-        </div>
-    
-        <ol class="commentlist">
-            <?php wp_list_comments('type=comment&callback=ql_comment');; ?>
-        </ol><!-- /commentlist-->
-    
-        <div class="navigation">
-            <div class="next-posts"><?php previous_comments_link() ?></div>
-            <div class="prev-posts"><?php next_comments_link() ?></div>
-        </div>
+	        <h3 class=""><?php comments_number(__('No Responses', 'eneaa'), __('One Response', 'eneaa'), __('% Responses', 'eneaa') );?></h3>
+	    
+	        <div class="navigation">
+	            <div class="next-posts"><?php previous_comments_link() ?></div>
+	            <div class="prev-posts"><?php next_comments_link() ?></div>
+	        </div>
+	    
+	        <ol class="commentlist">
+	            <?php wp_list_comments('type=comment&callback=ql_comment');; ?>
+	        </ol><!-- /commentlist-->
+	    
+	        <div class="navigation">
+	            <div class="next-posts"><?php previous_comments_link() ?></div>
+	            <div class="prev-posts"><?php next_comments_link() ?></div>
+	        </div>
+        </div><!-- /comments-->
         
-     <?php else : // this is displayed if there are no comments so far ?>
+     <?php endif; ?>
     
-        <?php if ( comments_open() ) : ?>
-            <!-- If comments are open, but there are no comments. -->
-    
-         <?php else : // comments are closed ?>
-            <p><?php //_e("Comments are closed.","eneaa");?></p>
-    
-        <?php endif; ?>
-        
-    <?php endif; ?>
+        <?php
+		// If comments are closed and there are comments, let's leave a little note, shall we?
+		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		?>
+		<div id="comments">
+			<p class="no-comments"><?php _e( 'Comments are closed.', 'eneaa' ); ?></p>
+		</div><!-- /comments-->
+	<?php endif; ?>
     
     
 
 
-</div><!-- /comments-->
+
 
 
 

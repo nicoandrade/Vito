@@ -28,6 +28,9 @@ class ql_Theme {
 		
 		/* Create all the widget areas */
 		$this->widget_areas();
+
+		/* Customizer */
+		$this->customizer();
 				
 		
 		/* Set the Full Width Image value */
@@ -174,9 +177,16 @@ class ql_Theme {
 				'default-attachment' => 'fixed',
 			) ) );
 
+			//HTML5 support
 			add_theme_support( 'html5', array(
 				'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 			) );
+
+			// Styles for TinyMCE
+		    add_editor_style( THEME_CSS . '/custom-editor-style.css' );
+		    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
+    		add_editor_style( $font_url );
+
 
 			/*add_theme_support( 'custom-header', apply_filters( 'ql_custom_header_args', array(
 				'default-text-color'     => "#777777",
@@ -216,7 +226,19 @@ class ql_Theme {
 		ql_require_file("/widget_areas.php", THEME_WIDGET_AREAS, CHILD_THEME_WIDGET_AREAS);
 	}
 	
-	
+	/**
+	 * Create all the widget areas
+	 */
+	public function customizer(){
+		/**
+		 * Front End Customizer
+		 *
+		 * WordPress 3.4 Required
+		 */
+
+		ql_require_file('/theme_customizer.php', THEME_FUNCTIONS, CHILD_THEME_FUNCTIONS);
+	}
+
 
 	
 	

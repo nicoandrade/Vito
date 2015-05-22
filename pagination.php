@@ -6,11 +6,15 @@ $temp_query = $wp_query;
 if (isset($the_query)) {
 	$wp_query = $the_query;
 }
-
-the_posts_pagination( array(
-	'prev_text'          => __( 'Previous page', 'eneaa' ),
+$pagination = get_the_posts_pagination( array(
+    'prev_text'          => __( 'Previous page', 'eneaa' ),
 	'next_text'          => __( 'Next page', 'eneaa' )
 ) );
+if ($pagination) {
+	echo '<div class="pagination_wrap">';
+	echo $pagination;
+	echo '</div><!-- /pagination_wrap -->';
+}
 $wp_query = $temp_query;
 wp_reset_postdata();
 ?>

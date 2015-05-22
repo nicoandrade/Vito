@@ -18,7 +18,7 @@
 
 /*Post										*/
 /*------------------------------------------*/
-.post{
+.post, .no-content{
 	background-color: #fff;
 	margin-bottom: 80px;
 }
@@ -215,3 +215,67 @@
 	border-color: @gray-lighter;
 	cursor: pointer;
 }
+
+
+
+
+
+/*Post and Page Pagination					*/
+/*------------------------------------------*/
+.page-links{
+	margin-top: 30px;
+}
+.page-links a, .page-links span{
+    background-color: @contrastColor;
+    border: 2px solid @gray-lighter;
+    color: @gray-light;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -2px;
+    padding: 8px 14px;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+}
+.page-links a{
+	padding-left: 0;
+	padding-right: 0;
+}
+.page-links > span{
+	background-color: @gray-lighter;
+	color: @gray-dark;
+	border-color: @gray-lighter;
+}
+.page-links a:hover{
+	background-color: @gray-lighter;
+	color: @gray-dark;
+	border-color: @gray-lighter;
+	cursor: pointer;
+}
+.page-links .screen-reader-text, .page-links a span{
+	background-color: transparent;
+    border: none;
+    color: @gray-light;
+    float: none;
+    line-height: 1.42857;
+    margin-left: -2px;
+    padding: 8px 14px;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/*Pages 									*/
+/*------------------------------------------*/
+article.page, article.attachment, article.error-404{
+	background-color: #fff;
+	margin-bottom: 80px;
+}
+.page-title{
+	margin-bottom: 1em;
+}
+
+
+
+

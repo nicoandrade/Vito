@@ -45,17 +45,11 @@
 
 	<div class="clearfix"></div>
 
-	<div class="pagination_wrap">
-	    <?php get_template_part( "pagination", "index" ); ?>
-	</div><!-- /pagination_wrap -->
-
+	<?php get_template_part( "pagination", "index" ); ?>
+	
 	<?php else : ?>
 
-		<article <?php post_class(); ?> >
-			<h2><?php _e('Not Found','eneaa'); ?></h2>
-			<p><?php _e('Sorry, but the requested resource was not found on this site.','eneaa'); ?></p>
-
-		</article>
+		<?php get_template_part( "/templates/content-none", "index" ); ?>
 
 	<?php endif; ?>
 
