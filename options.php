@@ -734,25 +734,6 @@ function optionsframework_options() {
 		'desc' => __('', 'quemalabs_admin'),
 		'type' => 'info');
 
-	$options[] = array(
-		'name' => __('Font Systems', 'quemalabs_admin'),
-		'desc' => __('Use a font system (Google Fonts)', 'quemalabs_admin'),
-		'id' =>  'font_system',
-		'std' => true,
-		'type' => 'checkbox' );
-
-	
-	$options[] = array( 'name' => 'Google Fonts',
-		'desc' => 'Some of the best fonts on <a href="http://www.google.com/webfonts">google fonts</a>.',
-		'id' =>  'google_font',
-		'std' => array( 'size' => '36px', 'face' => 'Lato, sans-serif', 'color' => '#00bc96'),
-		'type' => 'typography',
-		'options' => array(
-			'faces' => ql_options_typography_get_google_fonts(),
-			'styles' => false,
-			'sizes' => false,
-			'color' => false )
-		);
 
 
 	

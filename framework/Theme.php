@@ -13,22 +13,15 @@ class ql_Theme {
 
 		/* Define theme's constants. */
 		$this->constants($theme_info);
-		
-		/* Add support for lenguages */
-		$this->lenguages();
 
+		/* Add Theme support */
+		$this->theme_support();
+		
 		/* Add Stylesheets for the Theme (CSS) */
 		$this->stylesheets();
 
 		/* Add JS Scripts for the Theme (JS) */
 		$this->scripts();
-		
-		/* Enable Plugins Activations */
-		$this->plugins_activation();
-
-		/* Add Theme support */
-		$this->theme_support();
-
 		
 		/* Add Theme Functions */
 		$this->theme_functions();
@@ -116,17 +109,6 @@ class ql_Theme {
 	
 	
 	
-	/**
-	 * Load the lenguage for the Theme
-	 */
-	public function lenguages(){
-
-		load_theme_textdomain( 'eneaa', THEME_LENGUAGES );
-		$locale = get_locale();
-		$locale_file = THEME_LENGUAGES."/$locale.php";
-		if ( is_readable($locale_file) )
-			require_once($locale_file);
-	}
 	
 
 	
@@ -158,18 +140,6 @@ class ql_Theme {
 
 	
 	
-
-	/**
-	 * Enable Plugins Activations
-	 */
-	public function plugins_activation(){
-		ql_require_file("/ql_tgm_plugin_activation.php", THEME_FUNCTIONS, CHILD_THEME_FUNCTIONS);
-	}
-
-
-
-
-	
 	
 	
 	/**
@@ -177,6 +147,9 @@ class ql_Theme {
 	 */
 	public function theme_support(){		
 		function ql_setup() {
+
+			load_theme_textdomain( 'eneaa', get_template_directory() . '/languages' );
+
 			add_theme_support( 'post-thumbnails' );
 
 			if ( function_exists( 'add_image_size' ) ) {
@@ -204,6 +177,12 @@ class ql_Theme {
 			add_theme_support( 'html5', array(
 				'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 			) );
+
+			/*add_theme_support( 'custom-header', apply_filters( 'ql_custom_header_args', array(
+				'default-text-color'     => "#777777",
+				'width'                  => 954,
+				'height'                 => 1300
+			) ) );*/
 		}
 		add_action( 'after_setup_theme', 'ql_setup' );
 	}

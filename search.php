@@ -31,7 +31,9 @@
         
                         
                    
-                    <?php include (TEMPLATEPATH . '/framework/nav.php' );?>
+                    <div class="pagination_wrap">
+                        <?php get_template_part( "pagination", "index" ); ?>
+                    </div><!-- /pagination_wrap -->
         
                     <?php else : ?>
         
