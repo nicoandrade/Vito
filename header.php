@@ -21,7 +21,7 @@
    <!-- /WP_Head -->
 </head>
     
-<body <?php body_class(THEME_SLUG.' ver'.THEME_VERSION); ?>>
+<body <?php body_class(QL_THEME_SLUG.' ver'.QL_THEME_VERSION); ?>>
 
 
 <div id="container" class="container">

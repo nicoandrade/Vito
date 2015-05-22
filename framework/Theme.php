@@ -45,68 +45,68 @@ class ql_Theme {
 	 * Defines the constant paths for use within the theme.
 	 */
 	private function constants($theme_info) {
-		define('THEME_NAME', $theme_info['theme_name']);
-		define('THEME_SLUG', $theme_info['theme_slug']);
-		define('THEME_VERSION', $theme_info['theme_version']);
-		define('THEME_AUTHOR', $theme_info['theme_author']);
-		define('THEME_AUTHOR_URI', $theme_info['theme_author_uri']);
+		define('QL_THEME_NAME', $theme_info['theme_name']);
+		define('QL_THEME_SLUG', $theme_info['theme_slug']);
+		define('QL_THEME_VERSION', $theme_info['theme_version']);
+		define('QL_THEME_AUTHOR', $theme_info['theme_author']);
+		define('QL_THEME_AUTHOR_URI', $theme_info['theme_author_uri']);
 
-		define('THEME_DIR', get_template_directory());
-		define('THEME_URI', get_template_directory_uri());
-
-		
-		define('THEME_CSS', THEME_URI . '/css');
-		define('THEME_JS', THEME_URI . '/js');
-		define('THEME_IMAGES', THEME_URI . '/images');
-
-
-		define('THEME_FRAMEWORK', THEME_DIR . '/framework');
-		define('THEME_FRAMEWORK_URI', THEME_URI . '/framework');
-
-		define('THEME_ADMIN', THEME_FRAMEWORK_URI . '/admin');
-		define('THEME_FUNCTIONS', THEME_FRAMEWORK . '/functions');
-		define('THEME_SCRIPTS', THEME_FRAMEWORK . '/theme_scripts');
-		define('THEME_POST_TYPES', THEME_FRAMEWORK . '/post_types');
-		define('THEME_META_BOXES', THEME_FRAMEWORK . '/meta_boxes');
-		define('THEME_META_BOXES_URI', THEME_FRAMEWORK_URI . '/meta_boxes');
-		define('THEME_WIDGET_AREAS', THEME_FRAMEWORK . '/widget_areas');
-		define('THEME_WIDGETS', THEME_FRAMEWORK . '/widgets');
-		define('THEME_SHORTCODES', THEME_FRAMEWORK . '/shortcodes');
-		define('THEME_FULLSCREEN', THEME_FRAMEWORK . '/fullscreen');
-		define('THEME_PLUGINS', THEME_FRAMEWORK . '/plugins');
-		define('THEME_PLUGINS_URI', THEME_FRAMEWORK_URI . '/plugins');
+		define('QL_THEME_DIR', get_template_directory());
+		define('QL_THEME_URI', get_template_directory_uri());
 
 		
-		define('THEME_LENGUAGES', THEME_DIR . '/languages');
+		define('QL_THEME_CSS', QL_THEME_URI . '/css');
+		define('QL_THEME_JS', QL_THEME_URI . '/js');
+		define('QL_THEME_IMAGES', QL_THEME_URI . '/images');
+
+
+		define('QL_THEME_FRAMEWORK', QL_THEME_DIR . '/framework');
+		define('QL_THEME_FRAMEWORK_URI', QL_THEME_URI . '/framework');
+
+		define('QL_THEME_ADMIN', QL_THEME_FRAMEWORK_URI . '/admin');
+		define('QL_THEME_FUNCTIONS', QL_THEME_FRAMEWORK . '/functions');
+		define('QL_THEME_SCRIPTS', QL_THEME_FRAMEWORK . '/theme_scripts');
+		define('QL_THEME_POST_TYPES', QL_THEME_FRAMEWORK . '/post_types');
+		define('QL_THEME_META_BOXES', QL_THEME_FRAMEWORK . '/meta_boxes');
+		define('QL_THEME_META_BOXES_URI', QL_THEME_FRAMEWORK_URI . '/meta_boxes');
+		define('QL_THEME_WIDGET_AREAS', QL_THEME_FRAMEWORK . '/widget_areas');
+		define('QL_THEME_WIDGETS', QL_THEME_FRAMEWORK . '/widgets');
+		define('QL_THEME_SHORTCODES', QL_THEME_FRAMEWORK . '/shortcodes');
+		define('QL_THEME_FULLSCREEN', QL_THEME_FRAMEWORK . '/fullscreen');
+		define('QL_THEME_PLUGINS', QL_THEME_FRAMEWORK . '/plugins');
+		define('QL_THEME_PLUGINS_URI', QL_THEME_FRAMEWORK_URI . '/plugins');
+
+		
+		define('QL_THEME_LENGUAGES', QL_THEME_DIR . '/languages');
 
 
 
 		//Constant for Child Themes
-		define('CHILD_THEME_DIR', get_stylesheet_directory());
-		define('CHILD_THEME_URI', get_stylesheet_directory_uri());
+		define('QL_CHILD_THEME_DIR', get_stylesheet_directory());
+		define('QL_CHILD_THEME_URI', get_stylesheet_directory_uri());
 		
-		define('CHILD_THEME_CSS', CHILD_THEME_URI . '/css');
-		define('CHILD_THEME_JS', CHILD_THEME_URI . '/js');
-		define('CHILD_THEME_IMAGES', CHILD_THEME_URI . '/images');
+		define('QL_CHILD_THEME_CSS', QL_CHILD_THEME_URI . '/css');
+		define('QL_CHILD_THEME_JS', QL_CHILD_THEME_URI . '/js');
+		define('QL_CHILD_THEME_IMAGES', QL_CHILD_THEME_URI . '/images');
 
-		define('CHILD_THEME_FRAMEWORK', CHILD_THEME_DIR . '/framework');
-		define('CHILD_THEME_FRAMEWORK_URI', CHILD_THEME_URI . '/framework');
+		define('QL_CHILD_THEME_FRAMEWORK', QL_CHILD_THEME_DIR . '/framework');
+		define('QL_CHILD_THEME_FRAMEWORK_URI', QL_CHILD_THEME_URI . '/framework');
 
-		define('CHILD_THEME_ADMIN', CHILD_THEME_FRAMEWORK_URI . '/admin');
-		define('CHILD_THEME_FUNCTIONS', CHILD_THEME_FRAMEWORK . '/functions');
-		define('CHILD_THEME_SCRIPTS', CHILD_THEME_FRAMEWORK . '/theme_scripts');
-		define('CHILD_THEME_POST_TYPES', CHILD_THEME_FRAMEWORK . '/post_types');
-		define('CHILD_THEME_META_BOXES', CHILD_THEME_FRAMEWORK . '/meta_boxes');
-		define('CHILD_THEME_META_BOXES_URI', CHILD_THEME_FRAMEWORK_URI . '/meta_boxes');
-		define('CHILD_THEME_WIDGET_AREAS', CHILD_THEME_FRAMEWORK . '/widget_areas');
-		define('CHILD_THEME_WIDGETS', CHILD_THEME_FRAMEWORK . '/widgets');
-		define('CHILD_THEME_SHORTCODES', CHILD_THEME_FRAMEWORK . '/shortcodes');
-		define('CHILD_THEME_FULLSCREEN', CHILD_THEME_FRAMEWORK . '/fullscreen');
-		define('CHILD_THEME_PLUGINS', CHILD_THEME_FRAMEWORK . '/plugins');
-		define('CHILD_THEME_PLUGINS_URI', CHILD_THEME_FRAMEWORK_URI . '/plugins');
+		define('QL_CHILD_THEME_ADMIN', QL_CHILD_THEME_FRAMEWORK_URI . '/admin');
+		define('QL_CHILD_THEME_FUNCTIONS', QL_CHILD_THEME_FRAMEWORK . '/functions');
+		define('QL_CHILD_THEME_SCRIPTS', QL_CHILD_THEME_FRAMEWORK . '/theme_scripts');
+		define('QL_CHILD_THEME_POST_TYPES', QL_CHILD_THEME_FRAMEWORK . '/post_types');
+		define('QL_CHILD_THEME_META_BOXES', QL_CHILD_THEME_FRAMEWORK . '/meta_boxes');
+		define('QL_CHILD_THEME_META_BOXES_URI', QL_CHILD_THEME_FRAMEWORK_URI . '/meta_boxes');
+		define('QL_CHILD_THEME_WIDGET_AREAS', QL_CHILD_THEME_FRAMEWORK . '/widget_areas');
+		define('QL_CHILD_THEME_WIDGETS', QL_CHILD_THEME_FRAMEWORK . '/widgets');
+		define('QL_CHILD_THEME_SHORTCODES', QL_CHILD_THEME_FRAMEWORK . '/shortcodes');
+		define('QL_CHILD_THEME_FULLSCREEN', QL_CHILD_THEME_FRAMEWORK . '/fullscreen');
+		define('QL_CHILD_THEME_PLUGINS', QL_CHILD_THEME_FRAMEWORK . '/plugins');
+		define('QL_CHILD_THEME_PLUGINS_URI', QL_CHILD_THEME_FRAMEWORK_URI . '/plugins');
 
 		
-		define('CHILD_THEME_LENGUAGES', CHILD_THEME_DIR . '/languages');
+		define('QL_CHILD_THEME_LENGUAGES', QL_CHILD_THEME_DIR . '/languages');
 	}
 	
 	
@@ -121,11 +121,11 @@ class ql_Theme {
 	public function stylesheets(){
 
 		//Stylesheets
-		ql_require_file("/stylesheets.php", THEME_SCRIPTS, CHILD_THEME_SCRIPTS);
+		ql_require_file("/stylesheets.php", QL_THEME_SCRIPTS, QL_CHILD_THEME_SCRIPTS);
 
 
 		//Custom Styles from Admin Panel
-		//ql_require_file("/styles.php", THEME_SCRIPTS, CHILD_THEME_SCRIPTS);
+		//ql_require_file("/styles.php", QL_THEME_SCRIPTS, QL_CHILD_THEME_SCRIPTS);
 		
 	}
 
@@ -137,7 +137,7 @@ class ql_Theme {
 	public function scripts(){
 
 		//Stylesheets
-		ql_require_file("/scripts.php", THEME_SCRIPTS, CHILD_THEME_SCRIPTS);
+		ql_require_file("/scripts.php", QL_THEME_SCRIPTS, QL_CHILD_THEME_SCRIPTS);
 		
 	}
 
@@ -183,16 +183,17 @@ class ql_Theme {
 			) );
 
 			// Styles for TinyMCE
-		    add_editor_style( THEME_CSS . '/custom-editor-style.css' );
+		    add_editor_style( QL_THEME_CSS . '/custom-editor-style.css' );
 		    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
     		add_editor_style( $font_url );
 
 
-			/*add_theme_support( 'custom-header', apply_filters( 'ql_custom_header_args', array(
+			add_theme_support( 'custom-header', apply_filters( 'ql_custom_header_args', array(
 				'default-text-color'     => "#777777",
-				'width'                  => 954,
-				'height'                 => 1300
-			) ) );*/
+				'width'                  => 953,
+				'height'                 => 110,
+				'wp-head-callback'       => 'ql_header_style',
+			) ) );
 		}
 		add_action( 'after_setup_theme', 'ql_setup' );
 	}
@@ -205,13 +206,16 @@ class ql_Theme {
 	public function theme_functions(){
 
 		//Custom Comments		
-		ql_require_file("/custom_comments.php", THEME_FUNCTIONS, CHILD_THEME_FUNCTIONS);
+		ql_require_file("/custom_comments.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);
 		
 		//Single Functions		
-		ql_require_file( "/single_functions.php", THEME_FUNCTIONS, CHILD_THEME_FUNCTIONS);
+		ql_require_file( "/single_functions.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);
 
 		//Custom Filters		
-		ql_require_file( "/custom_filters.php", THEME_FUNCTIONS, CHILD_THEME_FUNCTIONS);		
+		ql_require_file( "/custom_filters.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);
+
+		//Custom Header
+		ql_require_file("/custom-header.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);	
 
 	}
 	
@@ -223,7 +227,7 @@ class ql_Theme {
 	 * Create all the widget areas
 	 */
 	public function widget_areas(){
-		ql_require_file("/widget_areas.php", THEME_WIDGET_AREAS, CHILD_THEME_WIDGET_AREAS);
+		ql_require_file("/widget_areas.php", QL_THEME_WIDGET_AREAS, QL_CHILD_THEME_WIDGET_AREAS);
 	}
 	
 	/**
@@ -236,7 +240,7 @@ class ql_Theme {
 		 * WordPress 3.4 Required
 		 */
 
-		ql_require_file('/theme_customizer.php', THEME_FUNCTIONS, CHILD_THEME_FUNCTIONS);
+		ql_require_file('/theme_customizer.php', QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);
 	}
 
 

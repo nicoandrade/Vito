@@ -31,6 +31,7 @@ function ql_quemalabs_options_register($wp_customize) {
 	$wp_customize->add_setting( 'headings_color', array(
 		'default' => '#333333',
 		'transport'  => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
 		'type' => 'option'
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'headings_color', array(
@@ -42,6 +43,7 @@ function ql_quemalabs_options_register($wp_customize) {
 	$wp_customize->add_setting( 'content_typography_color', array(
 		'default' => '#444444',
 		'transport'  => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
 		'type' => 'option'
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'content_typography_color', array(
@@ -53,6 +55,7 @@ function ql_quemalabs_options_register($wp_customize) {
 	$wp_customize->add_setting( 'links_typography_color', array(
 		'default' => '#68B1D5',
 		'transport'  => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
 		'type' => 'option'
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'links_typography_color', array(

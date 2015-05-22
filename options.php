@@ -113,7 +113,7 @@ function optionsframework_options() {
 	}
 
 	// If using image radio buttons, define a directory path
-	$imagepath =  THEME_IMAGES ;
+	$imagepath =  QL_THEME_IMAGES ;
 
 
 	$shortname = "ql_"; //deprecated
@@ -134,9 +134,9 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __('Theme Info', 'quemalabs_admin'),
-		'desc' => '<strong>Name:</strong> '. THEME_NAME . '<br />' .
-		'<strong>Version:</strong> '. THEME_VERSION . '<br />' .
-		'<strong>Author:</strong> ' . THEME_AUTHOR,
+		'desc' => '<strong>Name:</strong> '. QL_THEME_NAME . '<br />' .
+		'<strong>Version:</strong> '. QL_THEME_VERSION . '<br />' .
+		'<strong>Author:</strong> ' . QL_THEME_AUTHOR,
 		'type' => 'info');
 
 
