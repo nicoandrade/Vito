@@ -68,4 +68,20 @@ function ql_quemalabs_options_register($wp_customize) {
 
 }
 
+
+/*
+Enqueue Script for Live previw in the Theme Customizer
+*/
+if ( ! function_exists( 'ql_customizer_live_preview' ) ){
+	function ql_customizer_live_preview()
+	{
+		wp_enqueue_script( 'ql-themecustomizer',			//Give the script an ID
+			  QL_THEME_JS.'/theme-customizer.js',//Point to file
+			  array( 'jquery','customize-preview' ),	//Define dependencies
+			  '',						//Define a version (optional) 
+			  true						//Put script in footer?
+		);
+	}
+}//end if function_exists
+add_action( 'customize_preview_init', 'ql_customizer_live_preview' );
 ?>

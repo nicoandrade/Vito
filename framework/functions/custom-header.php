@@ -24,7 +24,14 @@ function ql_header_style() {
 		}
 	<?php
 		endif;
+		
+		// Has the text been hidden?
+		if ( ! display_header_text() ) :
 	?>
+		.ql_logo {
+			display: none;
+		}
+	<?php endif; ?>
 	</style>
 	<?php
 }

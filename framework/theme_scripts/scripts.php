@@ -7,12 +7,7 @@
 	//Register JS Scripts for later use
 if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 	function ql_enqueue_scripts() {
-		
-		//HTML5Shiv =============================================
-		wp_register_script('html5shiv', QL_THEME_JS . '/html5shiv.min.js', '3.7.3', true);
-		wp_enqueue_script('html5shiv');
-		//=================================================================	
-		
+				
 		//hoverIntent Plugin ==============================================
 		wp_register_script('hoverIntent', QL_THEME_JS . '/jquery.hoverIntent.minified.js', array('jquery'), '6.0', true );
 		wp_enqueue_script('hoverIntent');
@@ -52,25 +47,4 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 }//end if function_exists
 	add_action('wp_enqueue_scripts', 'ql_enqueue_scripts');
 
-
-
-
-
-
-/*
-Enqueue Script for Live previw in the Theme Customizer
-
-*/
-if ( ! function_exists( 'ql_customizer_live_preview' ) ){
-	function ql_customizer_live_preview()
-	{
-		wp_enqueue_script( 'ql-themecustomizer',			//Give the script an ID
-			  QL_THEME_JS.'/theme-customizer.js',//Point to file
-			  array( 'jquery','customize-preview' ),	//Define dependencies
-			  '',						//Define a version (optional) 
-			  true						//Put script in footer?
-		);
-	}
-}//end if function_exists
-add_action( 'customize_preview_init', 'ql_customizer_live_preview' );
 ?>
