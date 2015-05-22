@@ -26,16 +26,14 @@ $ql_theme_info = include(get_template_directory() . '/framework/info.php');
 $ql_Theme = new ql_Theme($ql_theme_info);
 
 
-	
-	// Load jQuery------------------------------------------------------->
-	if ( ! function_exists( 'ql_jquery_script' ) ) :
-		function ql_jquery_script() {
-			wp_enqueue_script( 'jquery' );
-		}    
-	endif;// if function_exists
-	add_action('wp_enqueue_scripts', 'ql_jquery_script');
-
-	// Load jQuery-------------------------------------------------------<
+// Load jQuery------------------------------------------------------->
+if ( ! function_exists( 'ql_jquery_script' ) ) :
+	function ql_jquery_script() {
+		wp_enqueue_script( 'jquery' );
+	}    
+endif;// if function_exists
+add_action('wp_enqueue_scripts', 'ql_jquery_script');
+// Load jQuery-------------------------------------------------------<
 	
 
 
@@ -43,13 +41,8 @@ $ql_Theme = new ql_Theme($ql_theme_info);
 
 
 
-	//You can start adding your code below
-	//==================================================================
-	
-
-
-
-
+//You can start adding your code below
+//==================================================================
 
 
 
