@@ -29,7 +29,7 @@
 
 	
 	//Update Headings color in real time...
-	wp.customize( 'headings_color', function( value ) {
+	wp.customize( 'quemalabs_options[headings_color]', function( value ) {
 		value.bind( function( newval ) {
 			$('h1, h2, h3, h4, h5, h6').each(function(index, el) {
 				$(el).style('color', newval, 'important');
@@ -73,18 +73,105 @@
   */
 
   //Update Font Content color in real time...
-  wp.customize( 'content_typography_color', function( value ) {
+  wp.customize( 'quemalabs_options[content_typography_color]', function( value ) {
     value.bind( function( newval ) {
       $('body').style('color', newval, 'important');
     } );
   } );
 
   //Update Font Links color in real time...
-  wp.customize( 'links_typography_color', function( value ) {
+  wp.customize( 'quemalabs_options[links_typography_color]', function( value ) {
     value.bind( function( newval ) {
       $('a').style('color', newval, 'important');
     } );
   } );
+
+
+
+  //Update social icons in real time...
+  wp.customize( 'quemalabs_options[social_facebook]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('facebook', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_twitter]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('twitter', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_instagram]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('instagram', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_flickr]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('flickr', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_youtube]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('youtube', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_vimeo-square]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('vimeo-square', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_linkedin]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('linkedin', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_skype]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('skype', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_google-plus]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('google-plus', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_tumblr]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('tumblr', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_dribbble]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('dribbble', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_foursquare]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('foursquare', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_pinterest]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('pinterest', newval);
+    } );
+  } );
+  wp.customize( 'quemalabs_options[social_rss]', function( value ) {
+    value.bind( function( newval ) {
+      updateSocial('rss', newval);
+    } );
+  } );
+
+
+
+  //Update Social icons in real time
+  function updateSocial(name, link){
+    if (link.length > 0 && $(".n_"+name).length == 0) {
+        $(".nav_social").append('<li class="n_'+ name +'"><a href="'+ link +'" ><i class="fa fa-'+name+'"></i></a></li>')
+    }else if(link.length == 0){
+      $(".n_"+ name).remove();
+    }else{
+      $(".n_"+ name +" a").attr('href', link);
+    }
+  }//updateSocial
 
 
 

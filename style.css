@@ -293,7 +293,7 @@ Social Nav
 .nav_social li.n_youtube a {
   color: #C1302A;
 }
-.nav_social li.n_vimeo a {
+.nav_social li.n_vimeo-square a {
   color: #1AB7EA;
 }
 .nav_social li.n_foursquare a {
@@ -335,7 +335,7 @@ Social Nav
 .nav_social li.n_youtube a:hover {
   background-color: #C1302A;
 }
-.nav_social li.n_vimeo a:hover {
+.nav_social li.n_vimeo-square a:hover {
   background-color: #1AB7EA;
 }
 .nav_social li.n_foursquare a:hover {
