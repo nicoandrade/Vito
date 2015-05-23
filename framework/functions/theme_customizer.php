@@ -41,7 +41,7 @@ function ql_quemalabs_options_register($wp_customize) {
 	) ) );
 
 	$wp_customize->add_setting( 'quemalabs_options[content_typography_color]', array(
-		'default' => '#444444',
+		'default' => '#777777',
 		'transport'  => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type' => 'option'
@@ -78,6 +78,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_facebook', array(
@@ -91,6 +92,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_twitter', array(
@@ -103,6 +105,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_instagram', array(
@@ -115,6 +118,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_flickr', array(
@@ -127,6 +131,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_youtube', array(
@@ -139,6 +144,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_vimeo-square', array(
@@ -151,6 +157,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_linkedin', array(
@@ -163,6 +170,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_skype', array(
@@ -175,6 +183,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_google-plus', array(
@@ -187,6 +196,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_tumblr', array(
@@ -199,6 +209,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_dribbble', array(
@@ -211,6 +222,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_foursquare', array(
@@ -223,6 +235,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_pinterest', array(
@@ -235,6 +248,7 @@ function ql_quemalabs_options_register($wp_customize) {
         'default'        => get_bloginfo('rss2_url'),
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
     $wp_customize->add_control('ql_social_rss', array(

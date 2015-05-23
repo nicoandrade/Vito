@@ -31,7 +31,7 @@
 	//Update Headings color in real time...
 	wp.customize( 'quemalabs_options[headings_color]', function( value ) {
 		value.bind( function( newval ) {
-			$('h1, h2, h3, h4, h5, h6').each(function(index, el) {
+			$('h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a').each(function(index, el) {
 				$(el).style('color', newval, 'important');
 			});
 		} );
@@ -46,22 +46,14 @@
   */
 
   //Update Header color in real time...
-  wp.customize( 'quemalabs_options[header_color]', function( value ) {
+  wp.customize( 'header_textcolor', function( value ) {
     value.bind( function( newval ) {
-      $('#header').each(function(index, el) {
-        $(el).style('background-color', newval, 'important');
-      });
-    } );
-  } );
-
-  //Update Header color in real time...
-  wp.customize( 'quemalabs_options[header_color_text]', function( value ) {
-    value.bind( function( newval ) {
-      $('#header, #header a, .logo_container .ql_logo, #jqueryslidemenu ul.nav > li a').each(function(index, el) {
+      $('#header, #jqueryslidemenu ul.nav > li > a').each(function(index, el) {
         $(el).style('color', newval, 'important');
       });
     } );
   } );
+
 
 
 
@@ -82,7 +74,9 @@
   //Update Font Links color in real time...
   wp.customize( 'quemalabs_options[links_typography_color]', function( value ) {
     value.bind( function( newval ) {
-      $('a').style('color', newval, 'important');
+      $('.post a, .widget a, .page a, #footer a').each(function(index, el) {
+        $(el).style('color', newval, 'important');
+      });
     } );
   } );
 

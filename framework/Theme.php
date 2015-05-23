@@ -125,7 +125,7 @@ class ql_Theme {
 
 
 		//Custom Styles from Admin Panel
-		//ql_require_file("/styles.php", QL_THEME_SCRIPTS, QL_CHILD_THEME_SCRIPTS);
+		ql_require_file("/styles.php", QL_THEME_SCRIPTS, QL_CHILD_THEME_SCRIPTS);
 		
 	}
 
@@ -209,10 +209,7 @@ class ql_Theme {
 		ql_require_file("/custom_comments.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);
 		
 		//Single Functions		
-		ql_require_file( "/single_functions.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);
-
-		//Custom Filters		
-		ql_require_file( "/custom_filters.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);
+		ql_require_file( "/custom-functions.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);
 
 		//Custom Header
 		ql_require_file("/custom-header.php", QL_THEME_FUNCTIONS, QL_CHILD_THEME_FUNCTIONS);	
