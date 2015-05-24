@@ -22,11 +22,6 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 		wp_register_script('pace', QL_THEME_JS . '/pace.min.js', array(), '0.2.0', true);
 		wp_enqueue_script('pace');
 		//=================================================================
-
-		//jQuery Easing Plugin ============================================
-		wp_register_script('easing', QL_THEME_JS . '/jquery.easing.1.3.js', array('jquery'), '1.3', true);
-		wp_enqueue_script('easing');
-		//=================================================================
 		
 		//Bootstrap JS ========================================
 		wp_register_script('bootstrap', QL_THEME_JS . '/bootstrap.min.js', array(), '2.1.0', true);

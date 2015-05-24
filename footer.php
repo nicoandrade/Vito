@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Proudly powered by <a href="#">WordPress</a>. Vito theme designed by <a href="#">Quema Labs</a>.</p>
+                    <p><?php _e( 'Proudly powered by ', 'eneaa' ); ?><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'eneaa' ) ); ?>">WordPress</a>. <?php _e( 'Vito theme designed by ', 'eneaa' ); ?><a rel="nofollow" href="<?php echo esc_url( __( 'https://quemalabs.com/', 'eneaa' ) ); ?>">Quema Labs</a>.</p>
                 </div>
             </div>
         </div>
