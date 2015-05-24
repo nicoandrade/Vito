@@ -62,4 +62,8 @@ Pace
 License: https://raw.githubusercontent.com/HubSpot/pace/master/LICENSE
 Source: http://github.hubspot.com/pace/docs/welcome/
 
+HTML5 Shiv by @afarkas @jdalton @jon_neal @rem
+License: MIT/GPL2 Licensed
+Source: https://github.com/afarkas/html5shiv
+
 [Lato Font](https://www.google.com/fonts/specimen/Lato) by Łukasz Dziedzic - Licensed under the [SIL Open Font License, 1.1](http://scripts.sil.org/OFL).
