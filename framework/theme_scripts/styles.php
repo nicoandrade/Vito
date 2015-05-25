@@ -1,15 +1,15 @@
 <?php
-if ( ! function_exists( 'ql_enqueue_scripts' ) ){
-	function ql_header_styles() {
+if ( ! function_exists( 'vito_enqueue_scripts' ) ){
+	function vito_header_styles() {
 
 		//Get all options
-		$ql_options = get_option('quemalabs_options');
+		$vito_options = get_option('quemalabs_options');
 
 		/*
 			Print CSS colors
 			==========================================================
 		*/
-		function ql_print_colors($color, $items_arr, $css_prop){
+		function vito_print_colors($color, $items_arr, $css_prop){
 			$v_count = count($items_arr);
 			$s_count = 1;
 			foreach ($items_arr as $css_line) {
@@ -23,7 +23,7 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 			echo "{";
 				echo $css_prop.": ".$color."!important;";
 			echo "}";
-		}//ql_print_colors()
+		}//vito_print_colors()
 
 
 	  ?>
@@ -38,11 +38,11 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 			=============================
 		*/
 		<?php
-		$ql_body_background = "#" . get_background_color();
-		$ql_body_background_html = array(
+		$vito_body_background = "#" . get_background_color();
+		$vito_body_background_html = array(
 			"body"
 		);
-		ql_print_colors($ql_body_background, $ql_body_background_html, 'background-color');
+		vito_print_colors($vito_body_background, $vito_body_background_html, 'background-color');
 		?>
 
 
@@ -52,12 +52,12 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 			=============================
 		*/
 		<?php
-		$ql_header_textcolor = "#" . get_header_textcolor();
-		$ql_header_textcolor_html = array(
+		$vito_header_textcolor = "#" . get_header_textcolor();
+		$vito_header_textcolor_html = array(
 			"#header",
 			"#jqueryslidemenu ul.nav > li > a"
 		);
-		ql_print_colors($ql_header_textcolor, $ql_header_textcolor_html, 'color');
+		vito_print_colors($vito_header_textcolor, $vito_header_textcolor_html, 'color');
 		?>
 
 		/*
@@ -66,11 +66,11 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 			=============================
 		*/
 		<?php
-		$ql_content_color = $ql_options['content_typography_color'];
-		$ql_content_color_html = array(
+		$vito_content_color = $vito_options['content_typography_color'];
+		$vito_content_color_html = array(
 			"body"
 		);
-		ql_print_colors($ql_content_color, $ql_content_color_html, 'color');
+		vito_print_colors($vito_content_color, $vito_content_color_html, 'color');
 		?>
 
 		/*
@@ -79,11 +79,11 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 			=============================
 		*/
 		<?php
-		$ql_links_color = $ql_options['links_typography_color'];
-		$ql_links_color_html = array(
+		$vito_links_color = $vito_options['links_typography_color'];
+		$vito_links_color_html = array(
 			".entry a, .widget a, #footer a, .metadata a"
 		);
-		ql_print_colors($ql_links_color, $ql_links_color_html, 'color');
+		vito_print_colors($vito_links_color, $vito_links_color_html, 'color');
 		?>
 
 		/*
@@ -92,11 +92,11 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 			=============================
 		*/
 		<?php
-		$ql_headings_color = $ql_options['headings_color'];
-		$ql_headings_color_html = array(
+		$vito_headings_color = $vito_options['headings_color'];
+		$vito_headings_color_html = array(
 			"h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a"
 		);
-		ql_print_colors($ql_headings_color, $ql_headings_color_html, 'color');
+		vito_print_colors($vito_headings_color, $vito_headings_color_html, 'color');
 		?>
 
 	
@@ -109,5 +109,5 @@ if ( ! function_exists( 'ql_enqueue_scripts' ) ){
 	}
 }//end if function_exists
 
-add_action( 'wp_head', 'ql_header_styles' );
+add_action( 'wp_head', 'vito_header_styles' );
 ?>

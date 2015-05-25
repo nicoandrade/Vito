@@ -20,7 +20,7 @@
    <!-- /WP_Head -->
 </head>
     
-<body <?php body_class(QL_THEME_SLUG.' ver'.QL_THEME_VERSION); ?>>
+<body <?php body_class(VITO_THEME_SLUG.' ver'.VITO_THEME_VERSION); ?>>
 
 
 <div id="container" class="container">

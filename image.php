@@ -36,7 +36,7 @@
                                 'after'       => '</div>',
                                 'link_before' => '<span>',
                                 'link_after'  => '</span>',
-                                'pagelink'    => __( 'Page', 'eneaa' ) . ' %',
+                                'pagelink'    => __( 'Page', 'vito' ) . ' %',
                                 'separator'   => '',
                             ) );
                             ?>

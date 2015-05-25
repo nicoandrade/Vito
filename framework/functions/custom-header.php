@@ -1,6 +1,6 @@
 <?php
-if ( ! function_exists( 'ql_header_style' ) ) :
-function ql_header_style() {
+if ( ! function_exists( 'vito_header_style' ) ) :
+function vito_header_style() {
 	$header_image = get_header_image();
 
 	// If no custom options for text are set, let's bail.
@@ -35,5 +35,5 @@ function ql_header_style() {
 	</style>
 	<?php
 }
-endif; // ql_header_style
+endif; // vito_header_style
 ?>

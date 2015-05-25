@@ -5,9 +5,9 @@
  * WordPress 3.4 Required
  */
  
-add_action( 'customize_register', 'ql_quemalabs_options_register' );
+add_action( 'customize_register', 'vito_quemalabs_options_register' );
 
-function ql_quemalabs_options_register($wp_customize) {
+function vito_quemalabs_options_register($wp_customize) {
 
 
 	$wp_customize->get_setting('blogname')->transport='postMessage';
@@ -19,7 +19,7 @@ function ql_quemalabs_options_register($wp_customize) {
 	=====================================================
 	*/
 	$wp_customize->add_section( 'title_tagline', array(
-	     'title'    => __( 'Site Title', 'eneaa' ),
+	     'title'    => __( 'Site Title', 'vito' ),
 	     'priority' => 20,
 	) );
 
@@ -34,8 +34,8 @@ function ql_quemalabs_options_register($wp_customize) {
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type' => 'option'
 	) );
-	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'ql_headings_color', array(
-		'label'      => __( 'Headings Color', 'eneaa' ),
+	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'vito_headings_color', array(
+		'label'      => __( 'Headings Color', 'vito' ),
 		'section'    => 'colors',
 		'settings'   => 'quemalabs_options[headings_color]'
 	) ) );
@@ -46,8 +46,8 @@ function ql_quemalabs_options_register($wp_customize) {
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type' => 'option'
 	) );
-	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'ql_content_typography_color', array(
-		'label'      => __( 'Content Color', 'eneaa' ),
+	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'vito_content_typography_color', array(
+		'label'      => __( 'Content Color', 'vito' ),
 		'section'    => 'colors',
 		'settings'   => 'quemalabs_options[content_typography_color]'
 	) ) );
@@ -58,8 +58,8 @@ function ql_quemalabs_options_register($wp_customize) {
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type' => 'option'
 	) );
-	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'ql_links_typography_color', array(
-		'label'      => __( 'Links Color', 'eneaa' ),
+	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'vito_links_typography_color', array(
+		'label'      => __( 'Links Color', 'vito' ),
 		'section'    => 'colors',
 		'settings'   => 'quemalabs_options[links_typography_color]'
 	) ) );
@@ -69,8 +69,8 @@ function ql_quemalabs_options_register($wp_customize) {
 	Social Icons
 	=====================================================
 	*/
-	$wp_customize->add_section( 'ql_social_icons', array(
-	     'title'    => __( 'Social Icons', 'eneaa' ),
+	$wp_customize->add_section( 'vito_social_icons', array(
+	     'title'    => __( 'Social Icons', 'vito' ),
 	     'priority' => 50,
 	) );
 
@@ -81,10 +81,10 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_facebook', array(
-        'label'      => __('Facebook', 'eneaa'),
-        'description' => __('Add your social URL:', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_facebook', array(
+        'label'      => __('Facebook', 'vito'),
+        'description' => __('Add your social URL:', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_facebook]',
     ));
 
@@ -95,9 +95,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_twitter', array(
-        'label'      => __('Twitter', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_twitter', array(
+        'label'      => __('Twitter', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_twitter]',
     ));
 
@@ -108,9 +108,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_instagram', array(
-        'label'      => __('Instagram', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_instagram', array(
+        'label'      => __('Instagram', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_instagram]',
     ));
 
@@ -121,9 +121,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_flickr', array(
-        'label'      => __('Flickr', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_flickr', array(
+        'label'      => __('Flickr', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_flickr]',
     ));
 
@@ -134,9 +134,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_youtube', array(
-        'label'      => __('Youtube', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_youtube', array(
+        'label'      => __('Youtube', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_youtube]',
     ));
 
@@ -147,9 +147,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_vimeo-square', array(
-        'label'      => __('Vimeo', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_vimeo-square', array(
+        'label'      => __('Vimeo', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_vimeo-square]',
     ));
 
@@ -160,9 +160,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_linkedin', array(
-        'label'      => __('LinkedIn', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_linkedin', array(
+        'label'      => __('LinkedIn', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_linkedin]',
     ));
 
@@ -173,9 +173,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_skype', array(
-        'label'      => __('Skype', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_skype', array(
+        'label'      => __('Skype', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_skype]',
     ));
 
@@ -186,9 +186,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_google-plus', array(
-        'label'      => __('Google Plus', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_google-plus', array(
+        'label'      => __('Google Plus', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_google-plus]',
     ));
 
@@ -199,9 +199,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_tumblr', array(
-        'label'      => __('Tumblr', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_tumblr', array(
+        'label'      => __('Tumblr', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_tumblr]',
     ));
 
@@ -212,9 +212,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_dribbble', array(
-        'label'      => __('Dribbble', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_dribbble', array(
+        'label'      => __('Dribbble', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_dribbble]',
     ));
 
@@ -225,9 +225,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_foursquare', array(
-        'label'      => __('Foursquare', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_foursquare', array(
+        'label'      => __('Foursquare', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_foursquare]',
     ));
 
@@ -238,9 +238,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_pinterest', array(
-        'label'      => __('Pinterest', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_pinterest', array(
+        'label'      => __('Pinterest', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_pinterest]',
     ));
 
@@ -251,9 +251,9 @@ function ql_quemalabs_options_register($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
         'type'           => 'option',
     ));
-    $wp_customize->add_control('ql_social_rss', array(
-        'label'      => __('RSS', 'eneaa'),
-        'section'    => 'ql_social_icons',
+    $wp_customize->add_control('vito_social_rss', array(
+        'label'      => __('RSS', 'vito'),
+        'section'    => 'vito_social_icons',
         'settings'   => 'quemalabs_options[social_rss]',
     ));
 
@@ -263,16 +263,16 @@ function ql_quemalabs_options_register($wp_customize) {
 /*
 Enqueue Script for Live previw in the Theme Customizer
 */
-if ( ! function_exists( 'ql_customizer_live_preview' ) ){
-	function ql_customizer_live_preview()
+if ( ! function_exists( 'vito_customizer_live_preview' ) ){
+	function vito_customizer_live_preview()
 	{
 		wp_enqueue_script( 'ql-themecustomizer',			//Give the script an ID
-			  QL_THEME_JS.'/theme-customizer.js',//Point to file
+			  VITO_THEME_JS.'/theme-customizer.js',//Point to file
 			  array( 'jquery','customize-preview' ),	//Define dependencies
 			  '',						//Define a version (optional) 
 			  true						//Put script in footer?
 		);
 	}
 }//end if function_exists
-add_action( 'customize_preview_init', 'ql_customizer_live_preview' );
+add_action( 'customize_preview_init', 'vito_customizer_live_preview' );
 ?>
