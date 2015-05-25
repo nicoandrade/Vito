@@ -231,6 +231,20 @@ Nav Menu
 End Nav Menu
 ---------------------------------------*/
 /*
+Mobile Menu Button
+---------------------------------------*/
+#ql-main-nav-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 5px;
+}
+#ql-main-nav-btn i {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+/*
 Social Nav
 ---------------------------------------*/
 .nav_social {
@@ -391,6 +405,9 @@ Blog & Pages
 }
 .entry {
   width: 95%;
+}
+.page .entry {
+  width: 100%;
 }
 /*Post Title 								*/
 /*------------------------------------------*/
@@ -4601,6 +4618,7 @@ h6 {
 }
 img {
   max-width: 100%;
+  height: auto;
 }
 .box_b {
   -webkit-border-radius: 2px;
@@ -5264,13 +5282,10 @@ Responsive Styles
     font-size: 14px;
     font-size: 0.875rem;
   }
-  #ql-main-nav-btn {
-    margin: 0;
-    padding: 10px;
-  }
-  #ql-main-nav-btn i {
-    font-size: 24px;
-    font-size: 1.5rem;
+  .logo_container {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 50px;
   }
   #ql-navigation {
     padding: 0;
