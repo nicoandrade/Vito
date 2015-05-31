@@ -2,9 +2,6 @@
 if ( ! function_exists( 'vito_enqueue_scripts' ) ){
 	function vito_header_styles() {
 
-		//Get all options
-		$vito_options = get_option('quemalabs_options');
-
 		/*
 			Print CSS colors
 			==========================================================
@@ -66,7 +63,7 @@ if ( ! function_exists( 'vito_enqueue_scripts' ) ){
 			=============================
 		*/
 		<?php
-		$vito_content_color = $vito_options['content_typography_color'];
+		$vito_content_color = get_theme_mod( 'content_typography_color' );
 		$vito_content_color_html = array(
 			"body"
 		);
@@ -79,7 +76,7 @@ if ( ! function_exists( 'vito_enqueue_scripts' ) ){
 			=============================
 		*/
 		<?php
-		$vito_links_color = $vito_options['links_typography_color'];
+		$vito_links_color = get_theme_mod( 'links_typography_color' );
 		$vito_links_color_html = array(
 			".entry a, .widget a, #footer a, .metadata a"
 		);
@@ -92,7 +89,7 @@ if ( ! function_exists( 'vito_enqueue_scripts' ) ){
 			=============================
 		*/
 		<?php
-		$vito_headings_color = $vito_options['headings_color'];
+		$vito_headings_color = get_theme_mod( 'headings_color' );
 		$vito_headings_color_html = array(
 			"h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a"
 		);

@@ -20,16 +20,9 @@
 		} );
 	} );
 
-  //Show or hide site's description...
-  wp.customize( 'quemalabs_options[show_desc]', function( value ) {
-    value.bind( function( newval ) {
-      $(".logo_desc").toggleClass('hidden');      
-    } );
-  } );
-
 	
 	//Update Headings color in real time...
-	wp.customize( 'quemalabs_options[headings_color]', function( value ) {
+	wp.customize( 'headings_color', function( value ) {
 		value.bind( function( newval ) {
 			$('h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a').each(function(index, el) {
 				$(el).style('color', newval, 'important');
@@ -37,6 +30,14 @@
 		} );
 	} );
 
+
+  wp.customize( 'background_color', function( value ) {
+    value.bind( function( newval ) {
+      $('body').each(function(index, el) {
+        $(el).style('background-color', newval, 'important');
+      });
+    } );
+  } );
 
 
 
@@ -65,14 +66,14 @@
   */
 
   //Update Font Content color in real time...
-  wp.customize( 'quemalabs_options[content_typography_color]', function( value ) {
+  wp.customize( 'content_typography_color', function( value ) {
     value.bind( function( newval ) {
       $('body').style('color', newval, 'important');
     } );
   } );
 
   //Update Font Links color in real time...
-  wp.customize( 'quemalabs_options[links_typography_color]', function( value ) {
+  wp.customize( 'links_typography_color', function( value ) {
     value.bind( function( newval ) {
       $('.post a, .widget a, .page a, #footer a').each(function(index, el) {
         $(el).style('color', newval, 'important');
@@ -83,72 +84,72 @@
 
 
   //Update social icons in real time...
-  wp.customize( 'quemalabs_options[social_facebook]', function( value ) {
+  wp.customize( 'social_facebook', function( value ) {
     value.bind( function( newval ) {
       updateSocial('facebook', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_twitter]', function( value ) {
+  wp.customize( 'social_twitter', function( value ) {
     value.bind( function( newval ) {
       updateSocial('twitter', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_instagram]', function( value ) {
+  wp.customize( 'social_instagram', function( value ) {
     value.bind( function( newval ) {
       updateSocial('instagram', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_flickr]', function( value ) {
+  wp.customize( 'social_flickr', function( value ) {
     value.bind( function( newval ) {
       updateSocial('flickr', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_youtube]', function( value ) {
+  wp.customize( 'social_youtube', function( value ) {
     value.bind( function( newval ) {
       updateSocial('youtube', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_vimeo-square]', function( value ) {
+  wp.customize( 'social_vimeo-square', function( value ) {
     value.bind( function( newval ) {
       updateSocial('vimeo-square', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_linkedin]', function( value ) {
+  wp.customize( 'social_linkedin', function( value ) {
     value.bind( function( newval ) {
       updateSocial('linkedin', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_skype]', function( value ) {
+  wp.customize( 'social_skype', function( value ) {
     value.bind( function( newval ) {
       updateSocial('skype', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_google-plus]', function( value ) {
+  wp.customize( 'social_google-plus', function( value ) {
     value.bind( function( newval ) {
       updateSocial('google-plus', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_tumblr]', function( value ) {
+  wp.customize( 'social_tumblr', function( value ) {
     value.bind( function( newval ) {
       updateSocial('tumblr', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_dribbble]', function( value ) {
+  wp.customize( 'social_dribbble', function( value ) {
     value.bind( function( newval ) {
       updateSocial('dribbble', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_foursquare]', function( value ) {
+  wp.customize( 'social_foursquare', function( value ) {
     value.bind( function( newval ) {
       updateSocial('foursquare', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_pinterest]', function( value ) {
+  wp.customize( 'social_pinterest', function( value ) {
     value.bind( function( newval ) {
       updateSocial('pinterest', newval);
     } );
   } );
-  wp.customize( 'quemalabs_options[social_rss]', function( value ) {
+  wp.customize( 'social_rss', function( value ) {
     value.bind( function( newval ) {
       updateSocial('rss', newval);
     } );

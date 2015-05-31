@@ -28,40 +28,40 @@ function vito_quemalabs_options_register($wp_customize) {
 	Color Section (Default)
 	=====================================================
 	*/
-	$wp_customize->add_setting( 'quemalabs_options[headings_color]', array(
+	$wp_customize->add_setting( 'headings_color', array(
 		'default' => '#333333',
 		'transport'  => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
-		'type' => 'option'
+		'type' => 'theme_mod'
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'vito_headings_color', array(
 		'label'      => __( 'Headings Color', 'vito' ),
 		'section'    => 'colors',
-		'settings'   => 'quemalabs_options[headings_color]'
+		'settings'   => 'headings_color'
 	) ) );
 
-	$wp_customize->add_setting( 'quemalabs_options[content_typography_color]', array(
+	$wp_customize->add_setting( 'content_typography_color', array(
 		'default' => '#777777',
 		'transport'  => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
-		'type' => 'option'
+		'type' => 'theme_mod'
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'vito_content_typography_color', array(
 		'label'      => __( 'Content Color', 'vito' ),
 		'section'    => 'colors',
-		'settings'   => 'quemalabs_options[content_typography_color]'
+		'settings'   => 'content_typography_color'
 	) ) );
 
-	$wp_customize->add_setting( 'quemalabs_options[links_typography_color]', array(
+	$wp_customize->add_setting( 'links_typography_color', array(
 		'default' => '#68B1D5',
 		'transport'  => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
-		'type' => 'option'
+		'type' => 'theme_mod'
 	) );
 	$wp_customize->add_control(new WP_Customize_Color_Control( $wp_customize, 'vito_links_typography_color', array(
 		'label'      => __( 'Links Color', 'vito' ),
 		'section'    => 'colors',
-		'settings'   => 'quemalabs_options[links_typography_color]'
+		'settings'   => 'links_typography_color'
 	) ) );
 
 
@@ -74,187 +74,187 @@ function vito_quemalabs_options_register($wp_customize) {
 	     'priority' => 50,
 	) );
 
-	$wp_customize->add_setting('quemalabs_options[social_facebook]', array(
+	$wp_customize->add_setting('social_facebook', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_facebook', array(
         'label'      => __('Facebook', 'vito'),
         'description' => __('Add your social URL:', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_facebook]',
+        'settings'   => 'social_facebook',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_twitter]', array(
+    $wp_customize->add_setting('social_twitter', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_twitter', array(
         'label'      => __('Twitter', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_twitter]',
+        'settings'   => 'social_twitter',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_instagram]', array(
+    $wp_customize->add_setting('social_instagram', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_instagram', array(
         'label'      => __('Instagram', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_instagram]',
+        'settings'   => 'social_instagram',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_flickr]', array(
+    $wp_customize->add_setting('social_flickr', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_flickr', array(
         'label'      => __('Flickr', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_flickr]',
+        'settings'   => 'social_flickr',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_youtube]', array(
+    $wp_customize->add_setting('social_youtube', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_youtube', array(
         'label'      => __('Youtube', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_youtube]',
+        'settings'   => 'social_youtube',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_vimeo-square]', array(
+    $wp_customize->add_setting('social_vimeo-square', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_vimeo-square', array(
         'label'      => __('Vimeo', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_vimeo-square]',
+        'settings'   => 'social_vimeo-square',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_linkedin]', array(
+    $wp_customize->add_setting('social_linkedin', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_linkedin', array(
         'label'      => __('LinkedIn', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_linkedin]',
+        'settings'   => 'social_linkedin',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_skype]', array(
+    $wp_customize->add_setting('social_skype', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_skype', array(
         'label'      => __('Skype', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_skype]',
+        'settings'   => 'social_skype',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_google-plus]', array(
+    $wp_customize->add_setting('social_google-plus', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_google-plus', array(
         'label'      => __('Google Plus', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_google-plus]',
+        'settings'   => 'social_google-plus',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_tumblr]', array(
+    $wp_customize->add_setting('social_tumblr', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_tumblr', array(
         'label'      => __('Tumblr', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_tumblr]',
+        'settings'   => 'social_tumblr',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_dribbble]', array(
+    $wp_customize->add_setting('social_dribbble', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_dribbble', array(
         'label'      => __('Dribbble', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_dribbble]',
+        'settings'   => 'social_dribbble',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_foursquare]', array(
+    $wp_customize->add_setting('social_foursquare', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_foursquare', array(
         'label'      => __('Foursquare', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_foursquare]',
+        'settings'   => 'social_foursquare',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_pinterest]', array(
+    $wp_customize->add_setting('social_pinterest', array(
         'default'        => '',
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_pinterest', array(
         'label'      => __('Pinterest', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_pinterest]',
+        'settings'   => 'social_pinterest',
     ));
 
-    $wp_customize->add_setting('quemalabs_options[social_rss]', array(
+    $wp_customize->add_setting('social_rss', array(
         'default'        => get_bloginfo('rss2_url'),
         'transport'  => 'postMessage',
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'esc_url_raw',
-        'type'           => 'option',
+        'type'     => 'theme_mod',
     ));
     $wp_customize->add_control('vito_social_rss', array(
         'label'      => __('RSS', 'vito'),
         'section'    => 'vito_social_icons',
-        'settings'   => 'quemalabs_options[social_rss]',
+        'settings'   => 'social_rss',
     ));
 
 }
