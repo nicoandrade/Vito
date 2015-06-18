@@ -4,7 +4,7 @@ Theme URI: http://themes.quemalabs.com/vito/
 Author: Quema Labs
 Author URI: http://www.quemalabs.com/
 Description: A free good looking theme.
-Version: 1.0.0
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, light, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, sticky-post, translation-ready
@@ -133,7 +133,6 @@ Blog & Pages
 
 .metadata ul li {
 	margin: 0 0 5px 5px;
-	float: right;
 }
 
 .metadata ul li i {
@@ -250,7 +249,8 @@ Widgets
 }
 
 #sidebar .hasChildren i {
-	float: left;
+	left: 0;
+	right: auto;
 }
 
 /*
@@ -272,7 +272,7 @@ Recent Comments Widget
 	padding-left: 0;
 }
 
-#sidebar .widget_recent_comments ul li:before {
+#sidebar .widget_recent_comments ul li::before {
 	right: 0;
 	left: auto;
 }
@@ -647,6 +647,56 @@ a img.aligncenter {
 	padding-left: 0;
 }
 
+/* Search Form
+-------------------------------------- */
+
+.widget_search .search-submit {
+	left: 0;
+	right: auto;
+}
+
+.search-form label::before {
+	left: 15px;
+	right: auto;
+}
+
+.widget_search i {
+	left: 12px;
+	right: auto;
+}
+
+/* Post Navigation
+-------------------------------------- */
+
+.post-navigation .nav-previous {
+	float: right;
+}
+
+.post-navigation .nav-next {
+	float: left;
+	text-align: left;
+}
+
+.post-navigation .nav-previous a {
+	padding-right: 45px;
+	padding-left: 0;
+}
+
+.post-navigation .nav-next a {
+	padding-left: 45px;
+	padding-right: 0;
+}
+
+.post-navigation .nav-previous a::before {
+	right: 20px;
+	left: auto;
+}
+
+.post-navigation .nav-next a::before {
+	left: 20px;
+	right: auto;
+}
+
 /*
 ==========================================
 Global Styles
@@ -918,7 +968,7 @@ Responsive Styles
 	// Small Breakpoint
 	// ------------------
 	*/
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1345px) {
 
 /*
 	Blog
@@ -951,7 +1001,7 @@ Responsive Styles
 	// Medium Breakpoint
 	// ------------------
 	*/
-@media (min-width: 992px) and (max-width: 1509px) {
+@media (min-width: 1346px) and (max-width: 1509px) {
 
 /*
 	Sidebar

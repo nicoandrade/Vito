@@ -28,7 +28,7 @@ if ( ! function_exists( 'vito_comment' ) ){
 
       <div class="comment_wrap col-md-10 col-sm-9">
 		        <?php if ($comment->comment_approved == '0') : ?>
-             <em><?php _e('Your comment is awaiting moderation.', "vito") ?></em>
+             <em><?php esc_html_e('Your comment is awaiting moderation.', "vito") ?></em>
              <br />
             <?php endif; ?>
             <div class="comment-entry">
@@ -44,7 +44,7 @@ if ( ! function_exists( 'vito_comment' ) ){
                 <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
                 <time datetime="<?php echo get_comment_date('c') ?>" pubdate><?php printf(__('%1$s at %2$s', 'vito'), get_comment_date(),  get_comment_time()) ?></time>
                 </a>
-                <?php edit_comment_link(__('(Edit)', 'vito'),'  ','') ?>
+                <?php edit_comment_link(esc_html__('(Edit)', 'vito'),'  ','') ?>
               </div>
     
           <div class="reply">

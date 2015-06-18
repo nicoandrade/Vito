@@ -5,7 +5,7 @@ Theme URI: http://themes.quemalabs.com/vito/
 Author: Quema Labs
 Author URI: http://www.quemalabs.com/
 Description: A free good looking theme.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, light, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, sticky-post, translation-ready
@@ -446,6 +446,14 @@ Blog & Pages
   display: block;
   text-align: center;
 }
+.post-image img {
+  width: 100%;
+  vertical-align: bottom;
+  border-radius: 5px 5px 0 0;
+  -webkit-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+}
 .post-image a img {
   width: 100%;
   vertical-align: bottom;
@@ -489,7 +497,7 @@ Blog & Pages
   font-size: 0.875rem;
   font-style: italic;
   margin: 0 5px 5px 0;
-  float: left;
+  display: block;
   position: relative;
   color: #a6a6a6;
 }
@@ -918,6 +926,7 @@ Widgets
   display: inline-block;
   width: 44%;
   margin-right: 15px;
+  position: relative;
 }
 #sidebar .widget ul li:first-child {
   border-top: none;
@@ -959,9 +968,11 @@ Widgets
   display: none;
 }
 #sidebar .hasChildren i {
-  float: right;
-  margin-top: 3px;
-  font-size: 1.16666666666667em;
+  font-size: 14px;
+  font-size: 0.875rem;
+  position: absolute;
+  right: 0;
+  top: 14px;
 }
 /*
 Ad Widget
@@ -991,7 +1002,7 @@ Recent Comments Widget
   display: block;
   width: 100%;
 }
-#sidebar .widget_recent_comments ul li:before {
+#sidebar .widget_recent_comments ul li::before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -4352,8 +4363,11 @@ a img.aligncenter {
   margin: 0;
   padding: 0 4px 5px;
 }
-.sticky {
+.sticky .post-inside {
   border: 3px solid #777777;
+}
+.sticky.has-post-thumbnail .post-inside {
+  border-top: 0;
 }
 .gallery .gallery-caption {
   color: #888;
@@ -4602,6 +4616,145 @@ a img.aligncenter {
 }
 .widget_nav_menu .menu-navigation-container .sub-menu {
   padding-left: 20px;
+}
+/* Search Form
+-------------------------------------- */
+.search-form {
+  position: relative;
+}
+.search-form label {
+  display: block;
+  position: relative;
+}
+.search-form label .screen-reader-text {
+  display: none;
+}
+.search-form .search-field {
+  width: 100%;
+  position: relative;
+  font-weight: normal;
+}
+.widget_search .search-field:focus {
+  border-color: #777777;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.widget_search .search-submit {
+  background: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  display: block;
+  text-indent: -9999px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+.search-form label::before {
+  display: block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 9px;
+  color: #a6a6a6;
+  font-size: 14px;
+  z-index: 1;
+}
+.widget_search i {
+  width: 17px;
+  height: 17px;
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #a6a6a6;
+}
+/* Post Navigation
+-------------------------------------- */
+.post-navigation {
+  margin: 40px 0;
+}
+.post-navigation:before,
+.post-navigation:after {
+  content: " ";
+  display: table;
+}
+.post-navigation:after {
+  clear: both;
+}
+.post-navigation .screen-reader-text {
+  display: none;
+}
+.post-navigation .nav-previous {
+  float: left;
+  width: 48%;
+}
+.post-navigation .nav-next {
+  float: right;
+  width: 48%;
+  text-align: right;
+}
+.post-navigation .nav-next a,
+.post-navigation .nav-previous a {
+  padding: 18px 23px;
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
+.post-navigation .nav-previous a {
+  padding-left: 45px;
+}
+.post-navigation .nav-next a {
+  padding-right: 45px;
+}
+.post-navigation .nav-previous a::before {
+  display: block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -6px;
+  color: #a6a6a6;
+  font-size: 14px;
+  z-index: 1;
+  text-decoration: none;
+  line-height: 1em;
+  width: 14px;
+  height: 14px;
+}
+.post-navigation .nav-next a::before {
+  display: block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -6px;
+  color: #a6a6a6;
+  font-size: 14px;
+  z-index: 1;
+  text-decoration: none;
+  line-height: 1em;
+  width: 14px;
+  height: 14px;
 }
 /*
 ==========================================
@@ -5455,9 +5608,6 @@ Responsive Styles
   #sidebar .sidebar-inside {
     padding: 20px 40px 40px;
     margin-left: 0;
-  }
-  .nav_social li {
-    margin: 2px;
   }
   #sidebar .widget ul li {
     width: 100%;

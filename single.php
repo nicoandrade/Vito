@@ -20,7 +20,9 @@
                         
                                 <?php the_content(); //Read more button is in framework/functions/single_functions.php?>
 
+                                <?php if(get_the_tags()){ ?>
                                 <p class="tags"><i class="fa fa-tag"></i> <?php the_tags('', '', ''); ?></p>
+                                <?php } ?>
 
                                 <div class="clearfix"></div>
                             </div><!-- /entry -->
@@ -30,7 +32,7 @@
                                 'after'       => '</div>',
                                 'link_before' => '<span>',
                                 'link_after'  => '</span>',
-                                'pagelink'    => __( 'Page', 'vito' ) . ' %',
+                                'pagelink'    => esc_attr__( 'Page', 'vito' ) . ' %',
                                 'separator'   => '',
                             ) );
                             ?>
@@ -49,11 +51,14 @@
 
                 <div class="clearfix"></div>
             </article>
+
                     
             <div class="clearfix"></div>
                     
         			
             <?php comments_template(); ?>
+
+            <?php the_post_navigation(); ?>
 
     
 <?php endwhile; else: ?>

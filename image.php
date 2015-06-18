@@ -36,7 +36,7 @@
                                 'after'       => '</div>',
                                 'link_before' => '<span>',
                                 'link_after'  => '</span>',
-                                'pagelink'    => __( 'Page', 'vito' ) . ' %',
+                                'pagelink'    => esc_attr__( 'Page', 'vito' ) . ' %',
                                 'separator'   => '',
                             ) );
                             ?>

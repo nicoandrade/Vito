@@ -84,8 +84,11 @@ a img.aligncenter {
 
 
 
-.sticky{
+.sticky .post-inside{
 	border: 3px solid @gray-light;
+}
+.sticky.has-post-thumbnail .post-inside{
+    border-top: 0;
 }
 
 
@@ -334,5 +337,146 @@ a img.aligncenter {
 }
 .widget_nav_menu .menu-navigation-container  .sub-menu{
     padding-left: 20px;
+}
+
+
+
+/* Search Form
+-------------------------------------- */
+.search-form{
+    position: relative;
+}
+.search-form label{
+    display: block;
+    position: relative;
+}
+.search-form label .screen-reader-text{
+    display: none;
+}
+.search-form .search-field{
+    width: 100%;
+    position: relative;
+    font-weight: normal;
+}
+.widget_search .search-field:focus{
+    border-color: @gray-light;
+    .box-shadow(none);
+}
+
+.widget_search .search-submit{
+    background: none;
+    border:none;
+    width:36px;
+    height:36px;
+    display:block;
+    text-indent:-9999px;
+    position:absolute;
+    right: 0;
+    top: 0;
+    cursor:pointer;
+    line-height:0;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+.search-form label::before{
+    display: block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    color: @gray-light2;
+    font-size: 14px;
+    z-index: 1;
+}
+.widget_search i{
+    width:17px;
+    height:17px;
+    display:block;
+    position:absolute;
+    right: 12px;
+    top: 12px;
+    cursor:pointer;
+    font-size: 1em;
+    color: @gray-light2;
+}
+
+
+
+
+/* Post Navigation
+-------------------------------------- */
+.post-navigation{
+    margin: 40px 0;
+    .clearfix;
+}
+.post-navigation .screen-reader-text{
+    display: none;
+}
+.post-navigation .nav-previous{
+    float: left;
+    width: 48%;
+}
+.post-navigation .nav-next{
+    float: right;
+    width: 48%;
+    text-align: right;
+}
+
+.post-navigation .nav-next a, .post-navigation .nav-previous a{
+    padding: 18px 23px;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    color: inherit;
+}
+.post-navigation .nav-previous a{
+    padding-left: 45px;
+}
+.post-navigation .nav-next a{
+    padding-right: 45px;
+
+}
+
+.post-navigation .nav-previous a::before{
+    display: block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-top: -6px;
+    color: @gray-light2;
+    font-size: 14px;
+    z-index: 1;
+    text-decoration: none;
+    line-height: 1em;
+    width: 14px;
+    height: 14px;
+}
+.post-navigation .nav-next a::before{
+    display: block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -6px;
+    color: @gray-light2;
+    font-size: 14px;
+    z-index: 1;
+    text-decoration: none;
+    line-height: 1em;
+    width: 14px;
+    height: 14px;
 }
 

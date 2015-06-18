@@ -7,8 +7,8 @@ if (isset($the_query)) {
 	$wp_query = $the_query;
 }
 $pagination = get_the_posts_pagination( array(
-    'prev_text'          => __( 'Previous page', 'vito' ),
-	'next_text'          => __( 'Next page', 'vito' )
+    'prev_text'          => esc_attr__( 'Previous page', 'vito' ),
+	'next_text'          => esc_attr__( 'Next page', 'vito' )
 ) );
 if ($pagination) {
 	echo '<div class="pagination_wrap">';

@@ -5,7 +5,7 @@
             die ('Please do not load this page directly. Thanks!');
     
         if ( post_password_required() ) { 
-            _e("This post is password protected. Enter the password to view comments.", "vito");
+            esc_html_e("This post is password protected. Enter the password to view comments.", "vito");
        
             return;
         }
@@ -14,7 +14,7 @@
     <?php if ( have_comments() ) : ?>
     	<div id="comments">
         
-	        <h3 class=""><?php comments_number(__('No Responses', 'vito'), __('One Response', 'vito'), __('% Responses', 'vito') );?></h3>
+	        <h3 class=""><?php comments_number(esc_attr__('No Responses', 'vito'), esc_attr__('One Response', 'vito'), esc_attr__('% Responses', 'vito') );?></h3>
 	    
 	        <div class="navigation">
 	            <div class="next-posts"><?php previous_comments_link() ?></div>
@@ -38,7 +38,7 @@
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
 		<div id="comments">
-			<p class="no-comments"><?php _e( 'Comments are closed.', 'vito' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'vito' ); ?></p>
 		</div><!-- /comments-->
 	<?php endif; ?>
     
@@ -66,7 +66,7 @@
 	        
 	        // redefine your own textarea (the comment body)
 	        'comment_field' => '<div class="input-wrap textarea clearfix">
-							      <label class="control-label" for="comment">'. __("Comment", "vito") .'</label>
+							      <label class="control-label" for="comment">'. esc_html__("Comment", "vito") .'</label>
 							      <div class="controls-wrap">
 									    <textarea class="input-xlarge" name="comment" id="comment" tabindex="4" rows="3"></textarea>
 							      </div>
@@ -78,7 +78,7 @@
 
 
 						'author' =>	'<div class="input-wrap">
-								      <label class="control-label" for="author">'. __("Name","vito").''. ( $req ? ' (*)' : '' ).'</label>
+								      <label class="control-label" for="author">'. esc_html__("Name","vito").''. ( $req ? ' (*)' : '' ).'</label>
 								      <div class="controls-wrap">
 									      	<i class="fa fa-user"></i>
 										    <input class="input-xlarge" type="text" name="author" id="author" value="'.  esc_attr($comment_author) .'" size="22" tabindex="1" ' . $aria_req . ' />
@@ -87,7 +87,7 @@
 								    </div>',
 						
 						'email' =>	'<div class="input-wrap">
-								      <label class="control-label" for="email">'. __("Email","vito") .''. ( $req ? ' (*)' : '' ).'</label>
+								      <label class="control-label" for="email">'. esc_html__("Email","vito") .''. ( $req ? ' (*)' : '' ).'</label>
 								      <div class="controls-wrap">
 									      	<i class="fa fa-envelope"></i>
 										    <input class="input-xlarge" type="text" name="email" id="email" value="'.  esc_attr($commenter['comment_author_email']).'" size="22" tabindex="2" ' . $aria_req . ' />
@@ -96,7 +96,7 @@
 
 
 						'url' =>	'<div class="input-wrap">
-								      <label class="control-label" for="url">'. __("Website","vito").'</label>
+								      <label class="control-label" for="url">'. esc_html__("Website","vito").'</label>
 								      <div class="controls-wrap">
 									      	<i class="fa fa-link"></i>
 										    <input class="input-xlarge" type="text" name="url" id="url" value="'.  esc_attr($commenter['comment_author_url']).'" size="22" tabindex="3" />

@@ -20,7 +20,7 @@
    <!-- /WP_Head -->
 </head>
     
-<body <?php body_class(VITO_THEME_SLUG.' ver'.VITO_THEME_VERSION); ?>>
+<body <?php body_class(esc_attr(VITO_THEME_SLUG.' ver'.VITO_THEME_VERSION)); ?>>
 
 
 <div id="container" class="container">
@@ -36,7 +36,7 @@
                             <?php
                             if ( is_front_page() && is_home() ) :
                             ?>
-                                <h1><a href="<?php echo home_url(); ?>/" class="ql_logo" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                                <h1><a href="<?php echo esc_url( home_url() ); ?>/" class="ql_logo" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                             <?php else : ?>
                                 <a class="ql_logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
                             <?php endif; ?>

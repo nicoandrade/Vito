@@ -83,8 +83,14 @@
 		display:block;
 		text-align: center;
 	}
+	.post-image img{
+		width: 100%;
+		vertical-align: bottom;
+		border-radius: @border-radius-large @border-radius-large 0 0;
+		.transition(all 1.5s);
+	}
 	.post-image a img{
-		width:100%;
+		width: 100%;
 		vertical-align: bottom;
 		border-radius: @border-radius-large @border-radius-large 0 0;
 		.transition(all 1.5s);
@@ -119,7 +125,7 @@
 	.font-size(14);
 	font-style: italic;
 	margin: 0 5px 5px 0;
-	float: left;
+	display: block;
 	position: relative;
 	color: @gray-light2;
 }
