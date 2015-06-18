@@ -1,0 +1,25 @@
+* 1.0.4 - 18/06/2015
+====================
+- Fixed: CSS layout on Medium screen size
+- Added: changelog file
+
+
+* 1.0.3 - 03/06/2015
+====================
+- Fixed: image sizing in WP editor
+
+
+* 1.0.2 - 30/05/2015
+====================
+- Changed: ‘option’ for ‘theme_mod’
+
+
+* 1.0.1 - 25/05/2015
+====================
+- Change: text domain to "vito"
+- Change: prefix to "vito_"
+
+
+* 1.0.0 - 25/05/2015
+====================
+- Released
