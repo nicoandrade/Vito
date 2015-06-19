@@ -41,8 +41,8 @@ if ( ! function_exists( 'vito_comment' ) ){
             
             
             <div class="comment-meta commentmetadata">
-                <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-                <time datetime="<?php echo get_comment_date('c') ?>" pubdate><?php printf(__('%1$s at %2$s', 'vito'), get_comment_date(),  get_comment_time()) ?></time>
+                <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+                <time datetime="<?php echo esc_attr( get_comment_date('c') ); ?>" pubdate><?php printf( esc_html__( '%1$s at %2$s', 'vito' ), get_comment_date(),  get_comment_time()) ?></time>
                 </a>
                 <?php edit_comment_link(esc_html__('(Edit)', 'vito'),'  ','') ?>
               </div>

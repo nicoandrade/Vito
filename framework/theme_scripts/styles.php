@@ -11,14 +11,14 @@ if ( ! function_exists( 'vito_enqueue_scripts' ) ){
 			$s_count = 1;
 			foreach ($items_arr as $css_line) {
 			    if ($v_count == $s_count) {
-					echo $css_line . "\n";
+					echo wp_strip_all_tags( $css_line ) . "\n";
 				}else{
-					echo $css_line . ",\n";	
+					echo wp_strip_all_tags( $css_line ) . ",\n";	
 				}
 				$s_count++;
 			}
 			echo "{";
-				echo $css_prop.": ".$color."!important;";
+				echo wp_strip_all_tags( $css_prop ) . ": " . esc_attr( $color ) . "!important;";
 			echo "}";
 		}//vito_print_colors()
 
