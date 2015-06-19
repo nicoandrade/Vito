@@ -12,7 +12,7 @@ $pagination = get_the_posts_pagination( array(
 ) );
 if ($pagination) {
 	echo '<div class="pagination_wrap">';
-	echo esc_html( $pagination );
+	echo wp_kses_post( $pagination );
 	echo '</div><!-- /pagination_wrap -->';
 }
 $wp_query = $temp_query;
