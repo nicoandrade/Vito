@@ -11,14 +11,14 @@ if ( ! function_exists( 'vito_enqueue_scripts' ) ){
 			$s_count = 1;
 			foreach ($items_arr as $css_line) {
 			    if ($v_count == $s_count) {
-					echo wp_strip_all_tags( $css_line ) . "\n";
+					echo wp_filter_nohtml_kses( $css_line ) . "\n";
 				}else{
-					echo wp_strip_all_tags( $css_line ) . ",\n";	
+					echo wp_filter_nohtml_kses( $css_line ) . ",\n";	
 				}
 				$s_count++;
 			}
 			echo "{";
-				echo wp_strip_all_tags( $css_prop ) . ": " . esc_attr( $color ) . "!important;";
+				echo wp_filter_nohtml_kses( $css_prop ) . ": " . esc_attr( $color ) . "!important;";
 			echo "}";
 		}//vito_print_colors()
 
