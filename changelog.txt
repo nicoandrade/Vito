@@ -1,3 +1,8 @@
+* 1.0.10 - 06/07/2015
+====================
+- Changed: Footer links (https for http)
+
+
 * 1.0.9 - 20/06/2015
 ====================
 - Fixed: sanitization for CSS scripts
