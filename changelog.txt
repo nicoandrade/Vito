@@ -1,3 +1,8 @@
+* 1.0.12 - 13/07/2015
+====================
+- Fixed: CSS padding on main navigation menu.
+
+
 * 1.0.11 - 13/07/2015
 ====================
 - Fixed: CSS background color showing under featured images on posts.
