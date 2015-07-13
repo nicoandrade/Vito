@@ -1,3 +1,8 @@
+* 1.0.11 - 13/07/2015
+====================
+- Fixed: CSS background color showing under featured images on posts.
+
+
 * 1.0.10 - 06/07/2015
 ====================
 - Changed: Footer links (https for http)
