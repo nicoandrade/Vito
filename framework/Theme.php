@@ -166,7 +166,7 @@ class vito_Theme {
 			//Add Menu Manager---------------------------
 			add_theme_support( 'nav-menus' );
 
-			register_nav_menus( array('menu-1' => esc_attr__( 'Navigation Menu' , 'quemalabs_admin')));
+			register_nav_menus( array('menu-1' => esc_attr__( 'Navigation Menu' , 'vito')));
 
 			//Title support---------------------------
 			add_theme_support( 'title-tag' );
