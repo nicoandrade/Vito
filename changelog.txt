@@ -1,3 +1,8 @@
+* 1.0.15 - 09/09/2015
+====================
+- Changed: Theme URI and description
+
+
 * 1.0.14 - 08/09/2015
 ====================
 - Fixed: Changed one wrong text-domain
